@@ -1,0 +1,4 @@
+project: PROJECT
+target: fuzz_open_workbook.pkg
+cmds:
+- cmd: /out/fuzz_open_workbook.pkg
