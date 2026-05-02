@@ -20,7 +20,7 @@ jobs:
         - os: ubuntu-latest
           triplet: x64-linux
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v6.0.2
       with:
         submodules: recursive
     - name: Log in to the Container registry
@@ -50,7 +50,7 @@ jobs:
           --cmd '/out/fuzz_open_workbook.pkg' --env LD_PRELOAD=/out/sanitizer_with_fuzzer.so
           --env ASAN_OPTIONS=symbolize=1:external_symbolizer_path=/out/llvm-symbolizer:detect_leaks=0
           --libfuzzer True
-        sarif-output: sarif
+        
     - name: Upload SARIF file(s)
       uses: github/codeql-action/upload-sarif@v2
       with:
