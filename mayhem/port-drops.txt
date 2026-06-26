@@ -1,0 +1,4 @@
+# Targets/harnesses from the original OSS-Fuzz integration intentionally NOT ported
+# to the two-branch model, with the reason. See scripts/integration/port-check.py.
+# Format:  <target-or-harness-name>  <reason>
+fuzz_open_workbook.pkg  legacy OSS-Fuzz duplicate of fuzz_open_workbook (same binary, non-libFuzzer replay mode); consolidated to the single libFuzzer target fuzz_open_workbook

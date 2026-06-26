@@ -1,0 +1,5 @@
+project: xlrd
+target: fuzz_open_workbook
+cmds:
+  - cmd: /mayhem/fuzz_open_workbook
+    libfuzzer: true
